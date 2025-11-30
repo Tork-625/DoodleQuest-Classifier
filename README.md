@@ -45,4 +45,5 @@ Find the latest Android APK inside the **Releases** section:
 
 ## Credits / Data Source
 This project uses the [Quick, Draw! dataset](https://quickdraw.withgoogle.com/data) by Google.
+
 **Dataset © Google LLC, licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).**
