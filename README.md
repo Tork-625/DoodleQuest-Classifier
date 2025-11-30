@@ -10,7 +10,7 @@ DoodleQuest utilizes a lightweight PyTorch-trained model, trained on the **Quick
 
 <p align="center">
   <img src="media/1.gif" alt="gameplay-1" width="390"/>
-  <img src="media/icon.png" alt="icon" height="204"/>
+  <img src="media/icon.png" alt="icon" height="184"/>
 </p>
 
 <p align="center">
