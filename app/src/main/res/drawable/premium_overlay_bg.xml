@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base color behind reflective overlay -->
+    <item>
+        <color android:color="#1F1B26"/> <!-- dark gray, change as you like -->
+    </item>
+
+    <!-- Glossy overlay -->
+    <item>
+        <bitmap
+            android:src="@drawable/reflective_bg"
+            android:gravity="fill"/>
+    </item>
+
+</layer-list>

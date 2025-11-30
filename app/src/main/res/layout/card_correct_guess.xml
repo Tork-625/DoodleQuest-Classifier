@@ -1,0 +1,60 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="500dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/premium_card_bg"
+    android:elevation="12dp">
+
+    <!-- Inner Card Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+
+
+        <!-- Main Image -->
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@drawable/image_holder_bg"
+            android:clipToOutline="true" />
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/card_label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Doodle Name"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:letterSpacing="0.05"
+            android:fontFamily="sans-serif-medium"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingTop="8dp"/>
+    </LinearLayout>
+
+
+    <!-- Glossy Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/premium_overlay_bg"
+        android:alpha="0.04"
+        android:clickable="false"
+        android:focusable="false"/>
+
+
+
+</FrameLayout>

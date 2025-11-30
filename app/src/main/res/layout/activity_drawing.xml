@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawing_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Congratulations banner -->
+    <ImageView
+        android:id="@+id/congrats_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/congralutations_banner"
+        android:visibility="gone"
+        android:elevation="1200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Drawing container -->
+    <FrameLayout
+        android:id="@+id/draw_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Hint Text -->
+    <TextView
+        android:id="@+id/text_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Hint will appear here"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/toggle_change"
+        app:layout_constraintStart_toEndOf="@+id/library_container"
+        app:layout_constraintTop_toTopOf="@+id/draw_container" />
+
+
+    <!-- Pencil Toggle -->
+    <ToggleButton
+        android:id="@+id/toggle_pencil"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_pencil"
+        android:clickable="true"
+        android:drawableTint="@color/toggle_tint"
+        android:focusable="true"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35"/>
+
+    <!-- Eraser Toggle -->
+    <ToggleButton
+        android:id="@+id/toggle_eraser"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_eraser"
+        android:clickable="true"
+        android:drawableTint="@color/toggle_tint"
+        android:focusable="true"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintStart_toEndOf="@id/toggle_pencil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35"/>
+
+    <!-- Change Toggle -->
+    <ToggleButton
+        android:id="@+id/toggle_change"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_change"
+        android:clickable="true"
+        android:drawableTint="@color/toggle_tint"
+        android:focusable="true"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Refresh Button -->
+    <ImageButton
+        android:id="@+id/button_refresh"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="Refresh"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_refresh"
+        android:stateListAnimator="@animator/button_press_animator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_pencil" />
+
+
+
+    <ImageButton
+        android:id="@+id/button_tick"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:src="@drawable/ic_tick"
+        android:contentDescription="Tick"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:stateListAnimator="@animator/button_press_animator"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <!-- Library container -->
+    <FrameLayout
+        android:id="@+id/library_container"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_library"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_library"
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:stateListAnimator="@animator/button_press_animator"
+            android:contentDescription="Library Button"/>
+
+        <TextView
+            android:id="@+id/badge_count"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/notification_circle"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:translationX="67dp"
+            android:translationY="-5dp"/>
+    </FrameLayout>
+
+    <!-- Progress overlay for loading dots -->
+    <FrameLayout
+        android:id="@+id/progressOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B7000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/dot1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_dot"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Dot"/>
+
+            <ImageView
+                android:id="@+id/dot2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_dot"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Dot 2"/>
+
+            <ImageView
+                android:id="@+id/dot3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_dot"
+                android:contentDescription="Dot 3"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Top-level overlay container for wrong/correct cards -->
+    <FrameLayout
+        android:id="@+id/top_overlay_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sweep_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:elevation="50dp"
+        android:visibility="gone"/>
+
+    <!-- Confetti container -->
+    <FrameLayout
+        android:id="@+id/confettiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="1000dp"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

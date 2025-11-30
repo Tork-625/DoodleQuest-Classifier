@@ -1,0 +1,40 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Press down -->
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:duration="50"
+        android:valueFrom="1.0"
+        android:valueTo="0.9"/>
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:duration="50"
+        android:valueFrom="1.0"
+        android:valueTo="0.9"/>
+
+    <!-- Release with overshoot -->
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:startOffset="50"
+        android:duration="150"
+        android:valueFrom="0.9"
+        android:valueTo="1.05"/>
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:startOffset="50"
+        android:duration="150"
+        android:valueFrom="0.9"
+        android:valueTo="1.05"/>
+
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:startOffset="200"
+        android:duration="50"
+        android:valueFrom="1.05"
+        android:valueTo="1.0"/>
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:startOffset="200"
+        android:duration="50"
+        android:valueFrom="1.05"
+        android:valueTo="1.0"/>
+</set>

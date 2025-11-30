@@ -1,0 +1,164 @@
+<!-- res/drawable/falling_doodles_full_width.xml -->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="400dp"
+            android:height="800dp"
+            android:viewportWidth="400"
+            android:viewportHeight="800">
+
+            <!-- Stars, hearts, circles, triangles, squares spread across width -->
+            <group android:name="star1_group">
+                <path
+                    android:name="star1"
+                    android:fillColor="#8BC34A"
+                    android:pathData="M12,2l2.4,7.2h7.6l-6,4.8l2.4,7.2L12,16.8L5.6,21.2l2.4,-7.2l-6,-4.8h7.6z"
+                    android:translateX="40"
+                    android:translateY="-50"/>
+            </group>
+
+            <group android:name="heart1_group">
+                <path
+                    android:name="heart1"
+                    android:fillColor="#FF5722"
+                    android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36,2,12.28,2,8.5 2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 19.58,3,22,5.42,22,8.5c0,3.78,-3.4,6.86,-8.55,11.54L12,21.35z"
+                    android:translateX="150"
+                    android:translateY="-80"/>
+            </group>
+
+            <group android:name="circle1_group">
+                <path
+                    android:name="circle1"
+                    android:fillColor="#03DAC6"
+                    android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10s10,-4.48 10,-10S17.52,2 12,2z"
+                    android:translateX="270"
+                    android:translateY="-30"/>
+            </group>
+
+            <group android:name="triangle1_group">
+                <path
+                    android:name="triangle1"
+                    android:fillColor="#FF9800"
+                    android:pathData="M12,2L22,20H2L12,2z"
+                    android:translateX="350"
+                    android:translateY="-60"/>
+            </group>
+
+            <group android:name="square1_group">
+                <path
+                    android:name="square1"
+                    android:fillColor="#9C27B0"
+                    android:pathData="M4,4h16v16H4z"
+                    android:translateX="100"
+                    android:translateY="-120"/>
+            </group>
+
+            <group android:name="star2_group">
+                <path
+                    android:name="star2"
+                    android:fillColor="#4CAF50"
+                    android:pathData="M12,2l2.4,7.2h7.6l-6,4.8l2.4,7.2L12,16.8L5.6,21.2l2.4,-7.2l-6,-4.8h7.6z"
+                    android:translateX="200"
+                    android:translateY="-100"/>
+            </group>
+
+            <group android:name="heart2_group">
+                <path
+                    android:name="heart2"
+                    android:fillColor="#E91E63"
+                    android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36,2,12.28,2,8.5 2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 19.58,3,22,5.42,22,8.5c0,3.78,-3.4,6.86,-8.55,11.54L12,21.35z"
+                    android:translateX="300"
+                    android:translateY="-140"/>
+            </group>
+
+        </vector>
+    </aapt:attr>
+
+    <!-- Animate all groups down endlessly -->
+    <target android:name="star1_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="4000"
+                android:valueFrom="-50"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="heart1_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="5000"
+                android:valueFrom="-80"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="circle1_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="3500"
+                android:valueFrom="-30"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="triangle1_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="4500"
+                android:valueFrom="-60"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="square1_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="3800"
+                android:valueFrom="-120"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="star2_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="4200"
+                android:valueFrom="-100"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="heart2_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:duration="4800"
+                android:valueFrom="-140"
+                android:valueTo="850"
+                android:repeatMode="restart"
+                android:repeatCount="infinite"/>
+        </aapt:attr>
+    </target>
+
+</animated-vector>
